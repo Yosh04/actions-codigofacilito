@@ -27,4 +27,10 @@ jobs:
     needs: [first-jop]
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'Hello'
+      - name: DecargarArchivo
+        uses: actions/download@v4
+        with:
+          name: archivo-test
+
+      - name: leer archivo-test
+        run: cat test.log
