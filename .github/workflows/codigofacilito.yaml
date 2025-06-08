@@ -6,10 +6,13 @@ on:
 
 jobs:
   first-jop:
+    env:
+      NAME: YoshEscorcia
     runs-on: ubuntu-latest
     steps:
     - run: echo "Línea 1"
     - run: echo "usuario ${{github.actor}}"
+    - run: echo "usuario $NAME"
 
 
   second-jop:
