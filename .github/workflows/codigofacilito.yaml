@@ -8,21 +8,6 @@ jobs:
   first-jop:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "hacemos un pull del codigo"
-      - run: echo "correr migraciones"
-      - run: echo "Generar binario"
-      - run: echo "Publicar version"
-      - run: echo "Se termino el ejercicio"
-  
-  second-jop:
-    needs: first-jop
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo 'iniciamos segundo jop'
-
-
-  thrid-job:
-    needs: [first-jop, second-jop]
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo 'tercer paso armado'
+    - run: |
+        echo "Línea 1"
+        echo "Línea 2"
