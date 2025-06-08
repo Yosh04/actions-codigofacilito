@@ -8,6 +8,5 @@ jobs:
   first-jop:
     runs-on: ubuntu-latest
     steps:
-    - run: |
-        echo "Línea 1"
-        echo "Línea 2"
+    - run: echo "Línea 1"
+    - run: echo "usuario ${{github.actor}}"
