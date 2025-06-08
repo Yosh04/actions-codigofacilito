@@ -24,6 +24,7 @@ jobs:
 
 
   second-jop:
+    needs: [first-jop]
     if: ${{github.ref == 'refs/heads/master'}}
     env:
       SALIDA: ${{needs.first_job.outputs.salida}}
