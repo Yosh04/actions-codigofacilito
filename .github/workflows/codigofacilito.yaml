@@ -15,6 +15,7 @@ jobs:
       - run: echo "Se termino el ejercicio"
   
   second-jop:
+    needs: first-jop
     runs-on: ubuntu-latest
     steps:
       - run: echo 'iniciamos segundo jop'
