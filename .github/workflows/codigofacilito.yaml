@@ -6,6 +6,9 @@ on:
 
 jobs:
   first-jop:
+
+    outputs:
+      salida: ${{steps.step_1.outputs.my_variable}}
     name: Case 1 real github actions
     env:
       NAME: YoshEscorcia
@@ -17,8 +20,13 @@ jobs:
 
     - name: Obtener mensaje
       run: echo "${{steps.step_1.outputs.my_variable}}"
+
+
+
   second-jop:
     if: ${{github.ref == 'refs/heads/master'}}
+    env:
+      SALIDA: ${{needs.first_job.outputs.salida}}
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'hello world from second jop'
+      - run: echo ' $SALIDA'
