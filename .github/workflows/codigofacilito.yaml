@@ -6,6 +6,7 @@ on:
 
 jobs:
   first-jop:
+    name: Case 1 real github actions
     env:
       NAME: YoshEscorcia
     runs-on: ubuntu-latest
