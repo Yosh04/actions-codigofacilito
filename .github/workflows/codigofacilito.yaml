@@ -5,7 +5,7 @@ on:
     branches: ["master"]
 
 jobs:
-  deploy-codigofacilito:
+  first-jop:
     runs-on: ubuntu-latest
     steps:
       - run: echo "hacemos un pull del codigo"
@@ -13,3 +13,9 @@ jobs:
       - run: echo "Generar binario"
       - run: echo "Publicar version"
       - run: echo "Se termino el ejercicio"
+  
+  second-jop:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'iniciamos segundo jop'
+      
