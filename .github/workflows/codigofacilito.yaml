@@ -19,4 +19,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo 'iniciamos segundo jop'
-      
+
+
+  thrid-job:
+    needs: [first-jop, second-jop]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'tercer paso armado'
