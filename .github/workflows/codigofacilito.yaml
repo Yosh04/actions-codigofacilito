@@ -6,26 +6,17 @@ on:
 
 jobs:
 
+  
 
   Deploy-app:
     name: Case 1 real github actions
-  
+
     runs-on: ubuntu-latest
     steps:
-    - name: instalando la imagen de nginx
-      id: step_1 
-      run: echo 'hola 1'
 
-    - name: crear archivo.
-      run: echo 'hola mundo' >> text.log
+    - name: construyendo y arrando
+      run: echo '${{github.actor}}'
 
 
-  testapp: 
-    needs: [Deploy-app]
-    name: iniciando testing
-    runs-on: ubuntu-latest
-    steps:
-      - name: iniciando
-        run: echo 'hello 2'
 
 
