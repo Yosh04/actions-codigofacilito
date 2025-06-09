@@ -5,14 +5,27 @@ on:
     branches: ["master"]
 
 jobs:
-  first-jop:
 
+
+  Deploy-app:
     name: Case 1 real github actions
-    strategy:
-      matrix: 
-        message: ['1', '2', '3']
+  
     runs-on: ubuntu-latest
     steps:
-    - name: Working dir
+    - name: instalando la imagen de nginx
       id: step_1 
-      run: echo '${{matrix.message}}'
+      run: echo 'hola 1'
+
+    - name: crear archivo.
+      run: echo 'hola mundo' >> text.log
+
+
+  testapp: 
+    needs: [Deploy-app]
+    name: iniciando testing
+    runs-on: ubuntu-latest
+    steps:
+      - name: iniciando
+        run: echo 'hello 2'
+
+
